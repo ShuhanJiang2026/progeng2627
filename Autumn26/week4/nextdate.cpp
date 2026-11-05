@@ -16,8 +16,7 @@ bool leap_year(int year) {
     return ly;
 }
 
-void next_date(int d1, int m1, int y1,
-               int& d2, int& m2, int& y2) {
+void next_date(int d1, int m1, int y1,int& d2, int& m2, int& y2) {
     y2 = y1;
 
     if (m1 == 1 || m1 == 3 || m1 == 5 ||
@@ -76,6 +75,5 @@ int main() {
     int d2, m2, y2;
     next_date(d1, m1, y1, d2, m2, y2);
 
-    std::cout << "The next date is: "
-              << d2 << "/" << m2 << "/" << y2 << std::endl;
+    std::cout << "The next date is: "<< d2 << "/" << m2 << "/" << y2 << std::endl;
 }
