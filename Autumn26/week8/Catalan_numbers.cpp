@@ -5,11 +5,13 @@ std::vector<unsigned long> catalan_numbers(int n);
 std::vector<unsigned long> catalan_numbers(int n){
     unsigned long sum;
     std::vector<unsigned long>v={};
-    for (int i =0;i < n;i++){
+    for (int i =0;i <= n;i++){
         sum =1;
-        int k =v.size()-1;
-        for(int j =0;j <v.size()-1;j++){
-        sum = sum + v[j] * v[k-j];
+        if (v.size()!=0){
+            int k =v.size()-1;
+            for(int j =0;j <v.size();j++){
+            sum = sum + v[j] * v[k-j];
+            }
         }
         v.push_back(sum);
         

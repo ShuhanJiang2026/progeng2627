@@ -40,8 +40,9 @@ void union_vector(const std::vector<std::string>& vin1, const std::vector<std::s
     for(int i =0; i<vin1.size();i++){
         vout.push_back(vin1[i]);
     }
-    bool notoverlap=true;
+
     for(int i =0; i<vin2.size();i++){
+        bool notoverlap=true;
         for(int j=0;j<vin1.size() && notoverlap;j++){
             if (vin2[i] == vin1[j]){
                 notoverlap = false;
